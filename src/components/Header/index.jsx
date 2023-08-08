@@ -2,25 +2,26 @@ import { useState } from "react";
 import Logo from "../../assets/Logo.svg";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
 
-export const Header = () => {
+export const Header = ({ openCartModal }) => {
    const [value, setValue] = useState("");
-
+   const [cartItemCount, setCartItemCount] = useState(0);
    return (
-      <header>
+      <header className="headerContent">
          <img src={Logo} alt="Logo Kenzie Burguer" />
-         <div>
-            <button>
-                <MdShoppingCart size={21} />
-                <span>0</span>
+         <div className="header" >
+            <button onClick={openCartModal}>
+               <MdShoppingCart size={21} />
+               <span> {cartItemCount}</span>
             </button>
             <form>
-               <input
+               <input placeholder="Digitar Pesquisa"
                   type="text"
                   value={value}
                   onChange={(e) => setValue(e.target.value)}
+
                />
-               <button type="submit">
-                 <MdSearch size={21} />
+               <button type="submit" className="submitBtn">
+                  <MdSearch size={21} />
                </button>
             </form>
          </div>
