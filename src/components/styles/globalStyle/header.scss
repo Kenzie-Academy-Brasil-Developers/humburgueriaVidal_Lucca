@@ -18,6 +18,8 @@ input {
     border-radius: 5px;
     height: 25px;
     border: 1px solid #E0E0E0;
+    margin-right: 10px;
+    margin-top: 5px;
 
 }
 
@@ -26,5 +28,14 @@ input {
     background-color: var(--color-green);
     border: 1px solid var(--color-green);
     border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
 
+}
+
+.cart {
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+    margin-top: 14px;
 }

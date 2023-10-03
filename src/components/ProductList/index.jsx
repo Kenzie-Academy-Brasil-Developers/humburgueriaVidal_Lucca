@@ -6,6 +6,7 @@ export const ProductList = ({
   addToCart,
   openCartModal,
   removeItemFromCart,
+  cartList,
 }) => {
   const [filteredProducts, setFilteredProducts] = useState(productList);
 
@@ -21,7 +22,7 @@ export const ProductList = ({
 
   return (
     <div className="container">
-      <Header openCartModal={openCartModal} filterProducts={filterProducts} />
+      <Header openCartModal={openCartModal} filterProducts={filterProducts} cartList={cartList} removeItemFromCart={removeItemFromCart} />
       <ul className="cardUl">
         {filteredProducts.map((product) => (
           <ProductCard

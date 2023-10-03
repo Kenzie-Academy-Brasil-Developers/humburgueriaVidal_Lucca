@@ -2,9 +2,10 @@ import { useState } from "react";
 import Logo from "../../assets/Logo.svg";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
 
-export const Header = ({ openCartModal, filterProducts }) => {
+export const Header = ({ openCartModal, filterProducts, cartList }) => {
   const [value, setValue] = useState("");
-  const [cartItemCount, setCartItemCount] = useState(0);
+  
+
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -15,9 +16,9 @@ export const Header = ({ openCartModal, filterProducts }) => {
     <header className="headerContent">
       <img src={Logo} alt="Logo Kenzie Burguer" />
       <div className="header">
-        <button onClick={openCartModal}>
+        <button onClick={openCartModal} className="cart">
           <MdShoppingCart size={21} />
-          <span> {cartItemCount}</span>
+          <span> {cartList.length}</span>
         </button>
         <form onSubmit={handleSearch}>
           <input

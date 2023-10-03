@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  width: 100%;
 
 }
 
@@ -13,14 +14,6 @@
   flex-direction: column;
 }
 
-// .cardList img {
-//   max-width: 100%;
-// }
-
-
-// .cardList img {
-//   max-width: 100%;
-// }
 
 .productName {
   font-family: var(--font-primary);
@@ -41,6 +34,7 @@
   width: 100px;
   height: 25px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 
@@ -65,13 +59,13 @@
   background-color: #F5F5F5;
   width: 300px;
   height: 150px;
-  
+
 
 }
 
 .img {
-width: 162px;
-height: 162px;
-margin-left: 60px;
+  width: 162px;
+  height: 162px;
+  margin-left: 60px;
 
 }

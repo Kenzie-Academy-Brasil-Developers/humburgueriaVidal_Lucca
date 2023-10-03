@@ -56,6 +56,7 @@ export const HomePage = () => {
             openCartModal={openCartModal}
             removeItemFromCart={removeItemFromCart}
             filterProducts={filterProducts}
+            cartList={cartList}
           />
         </div>
         <CartModal

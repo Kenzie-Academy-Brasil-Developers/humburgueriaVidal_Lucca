@@ -2,7 +2,7 @@ import { MdDelete } from "react-icons/md";
 
 export const CartItemCard = ({ product, removeItemFromCart }) => {
    const handleDelete = () => {
-      removeItemFromCart(product.id); 
+      removeItemFromCart(product.id);
    };
 
    return (
