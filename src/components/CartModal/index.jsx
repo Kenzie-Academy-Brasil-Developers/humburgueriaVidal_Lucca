@@ -7,6 +7,11 @@ export const CartModal = ({ cartList, isOpen, onClose, setCartList }) => {
       return prevValue + product.price;
    }, 0);
 
+   const removeItemFromCart = (productId) => {
+      const updatedCart = cartList.filter(product => product.id !== productId);
+      setCartList(updatedCart);
+   };
+
    if (!isOpen) {
       return null;
    }
@@ -28,7 +33,7 @@ export const CartModal = ({ cartList, isOpen, onClose, setCartList }) => {
          <div className="modal-content">
             <ul>
                {cartList.map((product) => (
-                  <CartItemCard key={product.id} product={product} />
+                  <CartItemCard key={product.id} product={product} removeItemFromCart={removeItemFromCart} />
                ))}
             </ul>
          </div>

@@ -4,7 +4,7 @@ import { MdSearch, MdShoppingCart } from "react-icons/md";
 
 export const Header = ({ openCartModal, filterProducts, cartList }) => {
   const [value, setValue] = useState("");
-  
+
 
 
   const handleSearch = (e) => {
